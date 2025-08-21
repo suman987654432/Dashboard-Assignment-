@@ -36,6 +36,7 @@ const SecondNav = () => {
   return (
     <div className="w-full bg-white border-b border-gray-200 relative">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-2 sm:px-6 py-2 gap-3 sm:gap-0">
+       
         <div className="flex items-center w-full sm:w-auto">
           <h1 className="text-lg sm:text-xl font-semibold text-gray-900 mr-3 sm:mr-6">
             Task
@@ -47,10 +48,11 @@ const SecondNav = () => {
                 key={option.name}
                 ref={(el) => (buttonRefs.current[option.name] = el)}
                 onClick={() => setActiveView(option.name)}
-                className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium transition-all duration-150 ${activeView === option.name
+                className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium transition-all duration-150 ${
+                  activeView === option.name
                     ? " text-gray-900"
                     : "text-gray-600 hover:text-gray-900 "
-                  }`}
+                }`}
               >
                 <span className="hidden sm:inline">{option.icon}</span>
                 <span>{option.name}</span>
@@ -60,25 +62,24 @@ const SecondNav = () => {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-end">
-          <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50 hover:text-gray-900 transition-all duration-150 min-w-fit">
+          {/* Sort By */}
+          <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 font-medium text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50 hover:text-gray-900 transition-all duration-150 min-w-fit">
             <FiFilter size={16} className="sm:w-4 sm:h-4" />
-            <span className="hidden md:inline">Sort By</span>
-            <span className="inline md:hidden">Sort</span>
+            <span className="text-xs sm:text-sm">Sort</span>
             <FiChevronDown
               size={14}
               className="sm:w-3.5 sm:h-3.5 hidden md:inline"
             />
           </button>
 
-          <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50 hover:text-gray-900 transition-all duration-150">
+          <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 font-medium text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50 hover:text-gray-900 transition-all duration-150">
             <FiFilter size={16} className="sm:w-4 sm:h-4" />
-            <span className="hidden sm:inline">Filter</span>
+            <span className="text-xs sm:text-sm">Filter</span>
           </button>
 
-          <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-all duration-150 whitespace-nowrap">
+          <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 font-medium text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-all duration-150 whitespace-nowrap">
             <FiPlus size={16} className="sm:w-4 sm:h-4" />
-            <span className="inline">Add</span>
-            <span className="hidden sm:inline">Task</span>
+            <span className="text-xs sm:text-sm">Add Task</span>
           </button>
         </div>
       </div>
