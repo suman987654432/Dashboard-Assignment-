@@ -5,7 +5,7 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <div className="w-full border-b border-gray-200 bg-white">
       <div className="flex items-center justify-between px-2 sm:px-6 py-2 sm:py-3">
-        {/*for mobile */}
+    
         <button
           onClick={toggleSidebar}
           className="lg:hidden p-1 sm:p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"

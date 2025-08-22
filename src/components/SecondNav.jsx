@@ -62,7 +62,7 @@ const SecondNav = () => {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-end">
-          {/* Sort By */}
+        
           <button className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 font-medium text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50 hover:text-gray-900 transition-all duration-150 min-w-fit">
             <FiFilter size={16} className="sm:w-4 sm:h-4" />
             <span className="text-xs sm:text-sm">Sort</span>

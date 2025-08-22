@@ -35,7 +35,7 @@ const Dashbord = () => {
           </div>
         </div>
         <div className="flex-1 overflow-y-auto flex justify-center">
-          <div className="w-full max-w-7xl">
+          <div className="w-full max-w-7xl h-fit">
             <TaskBoard />
           </div>
         </div>
